@@ -5,9 +5,17 @@ ShopEase is a robust e-commerce website built using the MERN stack (MongoDB, Exp
 Key Features:
 
 Product Catalog: Browse and search through a variety of products effortlessly.
+
+
 User Authentication: Secure login and registration system for personalized user experiences.
+
+
 Shopping Cart: Add, update, or remove items before proceeding to checkout.
+
+
 Order Management: Track orders, view order history, and handle payments securely.
+
+
 Admin Panel: Manage products, orders, and users with administrative controls.
 
 Tech Stack:
