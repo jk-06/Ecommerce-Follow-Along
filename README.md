@@ -14,7 +14,10 @@ Order Management: Track orders, view order history, and handle payments securely
 
 Admin Panel: Manage products, orders, and users with administrative controls.
 
+
+
 Tech Stack:
+
 Front-End: React — for building an interactive and responsive user interface.
 
 Back-End: Node.js with Express — for server-side logic and API handling.
