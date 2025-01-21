@@ -3,6 +3,7 @@ Overview:
 ShopEase is a robust e-commerce website built using the MERN stack (MongoDB, Express.js, React.js, and Node.js). It is designed to offer users a seamless shopping experience, providing easy browsing, secure transactions, and personalized recommendations. This project is a practical implementation of full-stack development concepts.
 
 Key Features:
+
 Product Catalog: Browse and search through a variety of products effortlessly.
 
 User Authentication: Secure login and registration system for personalized user experiences.
