@@ -31,33 +31,54 @@ This project aims to simulate the development of a real-world e-commerce platfor
 
 
 #Milestone 2#:
-Description
+
+Description:
+
 In Milestone 2, I focused on structuring the project and setting up the frontend and backend for the e-commerce application. This milestone involved configuring the development environment, creating a functional login page, and laying the foundation for future API integrations.
 
 What I Learned
 Project Folder Structure: I organized the project files into separate directories for the frontend (React) and backend (Node.js), streamlining the development process.
 React Frontend Setup: I initialized a React app to handle the user interface, ensuring a smooth foundation for building the app's frontend.
+
 Node.js Backend Setup: I set up a basic Node.js server to handle backend functionality, preparing for API integration in later milestones.
+
 Tailwind CSS Integration: I configured Tailwind CSS to enable utility-based, responsive styling throughout the project.
+
 Login Page Development: I created the first user interface of the e-commerce platform—a functional and styled login page—allowing users to securely log into the platform.
+
 Key Features
+
 Folder Structure: Organized files into frontend and backend directories for better management.
+
 Login Page: A functional login page for users to access the platform securely.
+
 Styling: Used Tailwind CSS to style the application with modern, responsive design principles.
 
 #Milestone 3#
+
 Project Description
+
 In Milestone 3, I focused on setting up the backend for the e-commerce application. This milestone involved organizing the backend code, connecting the application to MongoDB, setting up a Node.js server, and implementing basic error handling to ensure smooth operation.
 
 What I Learned
+
 Backend Folder Structure: I organized the backend code into a structured hierarchy, with separate folders for routes, controllers, models, and middleware.
+
 Server Setup: I initialized a Node.js server using Express and configured it to listen on a designated port, ready to handle incoming API requests.
+
 MongoDB Integration: I connected the application to MongoDB, ensuring efficient data storage and retrieval.
+
 Error Handling: I implemented basic error handling to provide clear messages for debugging and better user feedback when something goes wrong.
+
 Key Features
+
 Backend Organization: Set up a clean folder structure for organizing backend files.
+
 Server Initialization: Configured a basic Node.js server using Express.
+
 Database Connection: Successfully integrated MongoDB for data management.
+
 Error Handling: Added basic error handling for smoother server operation.
+
 
 #Milestone 4#
