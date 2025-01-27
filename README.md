@@ -80,5 +80,22 @@ Database Connection: Successfully integrated MongoDB for data management.
 
 Error Handling: Added basic error handling for smoother server operation.
 
-
 #Milestone 4#
+
+Description
+In Milestone 4, I expanded the backend functionality of the e-commerce application by introducing user data management and file uploads. This involved creating a User Model and Controller, as well as configuring Multer for handling file uploads like profile pictures.
+
+What I Learned
+User Model Creation: Designed a blueprint for user data, specifying fields like name, email, and password using a MongoDB schema.
+
+User Controller: Implemented logic to manage user-related operations, such as adding new users and retrieving their information.
+File Uploads with Multer: Configured Multer to handle and store file uploads securely, enabling the application to accept user-uploaded images.
+
+Key Features
+
+User Model: Defined the structure for user data in the database using MongoDB schemas.
+
+User Controller: Managed server-side operations related to users, like handling requests for user registration or retrieval.
+
+File Uploads: Enabled file upload functionality, allowing users to upload profile pictures that are stored on the server.
+
