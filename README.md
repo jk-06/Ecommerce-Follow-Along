@@ -1,5 +1,5 @@
 # Ecommerce-Follow-Along
-#Milestone 1#
+#Milestone 1: Project Overview#
 
 Overview:
 ShopEase is a robust e-commerce website built using the MERN stack (MongoDB, Express.js, React.js, and Node.js). It is designed to offer users a seamless shopping experience, providing easy browsing, secure transactions, and personalized recommendations. This project is a practical implementation of full-stack development concepts.
@@ -31,7 +31,7 @@ Why This Project?
 This project aims to simulate the development of a real-world e-commerce platform while giving hands-on experience with the MERN stack. It’s a great way to understand the interplay between the front-end, back-end, and database, while solving a common user problem: making online shopping simple and enjoyable.
 
 
-#Milestone 2#:
+#Milestone 2: Project Setup and Login Page#:
 
 Description:
 
@@ -55,7 +55,7 @@ Login Page: A functional login page for users to access the platform securely.
 
 Styling: Used Tailwind CSS to style the application with modern, responsive design principles.
 
-#Milestone 3#
+#Milestone 3: Project Setup for Backend#
 
 Description:
 
@@ -81,7 +81,7 @@ Database Connection: Successfully integrated MongoDB for data management.
 
 Error Handling: Added basic error handling for smoother server operation.
 
-#Milestone 4#
+#Milestone 4: Creating User Model and Controller#
 
 Description:
 
