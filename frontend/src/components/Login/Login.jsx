@@ -1,8 +1,6 @@
 import { React, useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import styles from "../../styles/styles";
-
-
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -37,10 +35,6 @@ const Login = () => {
                 />
               </div>
             </div>
-
-
-
-
             <div>
               <label
                 htmlFor="password"
@@ -49,7 +43,7 @@ const Login = () => {
                 Password
               </label>
               <div className="mt-1 relative">
-                <input type={visible ? "text" : "password"}
+                <input  type={visible ? "text" : "password"}
                   name="password"
                   autoComplete="current-password"
                   required
@@ -73,7 +67,7 @@ const Login = () => {
                   />
                 )}
               </div>
-            </div>
+              </div>
             <div className={`${styles.noramlFlex} justify-between`}>
               <div className={`${styles.noramlFlex}`}>
                 <input
@@ -107,7 +101,7 @@ const Login = () => {
               </button>
             </div>
             <div className={`${styles.noramlFlex} w-full`}>
-              <h4>Not have any account?</h4>
+            <h4>Not have any account?</h4>
               </div>
           </form>
         </div>
@@ -115,6 +109,10 @@ const Login = () => {
     </div>
      )
     }
-   
-   
-    export default Login
+    export default Login;
+
+
+
+
+
+

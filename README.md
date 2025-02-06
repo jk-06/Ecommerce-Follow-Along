@@ -102,3 +102,22 @@ User Controller: Managed server-side operations related to users, like handling 
 
 File Uploads: Enabled file upload functionality, allowing users to upload profile pictures that are stored on the server.
 
+Milestone 5: Sign-Up Page and Form Validation
+
+Description:
+
+In Milestone 5, I focused on developing the Sign-Up page for the e-commerce platform, allowing users to register by filling out their personal details. This included fields such as Name, Email, and Password. I also implemented form validation to ensure that users' inputs are correct and secure before submission.
+
+What I Learned:
+
+Sign-Up Page Creation: I built a user-friendly Sign-Up page where users can enter their details to create an account. The page includes fields for Name, Email, and Password, making it easy for users to input their information.
+
+Form Validation: I implemented form validation to check if the entered email is in the correct format and if the password meets security criteria (e.g., minimum length). This ensures that invalid data is prevented from being submitted.
+
+Key Features:
+
+Sign-Up Page UI: A clean and responsive UI for user registration with input fields for name, email, and password.
+
+Form Validation: Validates the email format and ensures the password meets the required length and complexity.
+
+User-Friendly Experience: Focused on providing a simple and effective user experience to streamline the registration process.
