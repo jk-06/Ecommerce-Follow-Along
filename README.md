@@ -606,7 +606,7 @@ The My Orders page allows users to view all their previous orders. It fetches or
 
 ### Overview
 
-The My Orders page allows users to view all their previous orders. It fetches order details from the backend by sending a GET request to the /my-orders endpoint with the user's email as a query parameter. Additionally, users can cancel their placed orders.
+The My - Orders page allows users to view all their previous orders. It fetches order details from the backend by sending a GET request to the /my-orders endpoint with the user's email as a query parameter. Additionally, users can cancel their placed orders.
 
 ### Features
 

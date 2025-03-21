@@ -10,4 +10,5 @@ const connectDatabase=()=>{
         process.exit(1); // Exit process to avoid running with an invalid DB connection
       });
   };
+  
   module.exports = connectDatabase;
