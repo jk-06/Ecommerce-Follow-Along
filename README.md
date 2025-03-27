@@ -602,7 +602,7 @@ The My Orders page allows users to view all their previous orders. It fetches or
 
 - Adds a "My Orders" link in the navigation bar for easy access
 
-## Milestone 28
+## Milestone 28 - My Orders Page
 
 ### Overview
 
@@ -619,3 +619,16 @@ The My - Orders page allows users to view all their previous orders. It fetches 
 - Hides the cancel button if the order is already canceled.
 
 - Adds a "My Orders" link in the navigation bar for easy access.
+
+Milestone 29 - PayPal Integration
+Overview
+The Order Confirmation page will support both Cash on Delivery (COD) and PayPal as payment options. Users selecting PayPal will see the PayPal payment buttons for secure online transactions.
+
+Features
+Set up a PayPal Developer Account.
+
+Retrieve Client ID from the PayPal sandbox accounts.
+
+Add radio buttons for selecting COD or Online Payment.
+
+Display PayPal buttons when Online Payment is selected.
