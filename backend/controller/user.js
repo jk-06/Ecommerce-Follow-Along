@@ -49,6 +49,7 @@ router.post("/create-user", upload.single("file"), catchAsyncErrors(async (req, 
     res.status(201).json({ success: true, user });
 }));
 
+
 router.post("/login", catchAsyncErrors(async (req, res, next) => {
     console.log("Logging in user...");
     const { email, password } = req.body;
