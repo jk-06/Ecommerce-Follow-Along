@@ -632,3 +632,16 @@ Retrieve Client ID from the PayPal sandbox accounts.
 Add radio buttons for selecting COD or Online Payment.
 
 Display PayPal buttons when Online Payment is selected.
+
+Milestone 30 - PayPal Payment Integration
+Overview
+This milestone focuses on integrating online payments using the PayPal API. The application will allow users to complete transactions using PayPal’s secure payment methods.
+
+Features
+Implement PayPal API for online payments.
+
+Retrieve the Client ID from the PayPal sandbox account.
+
+Install and configure react-paypal-js for seamless PayPal integration.
+
+Display PayPal payment methods, including credit/debit cards.
