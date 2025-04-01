@@ -645,3 +645,18 @@ Retrieve the Client ID from the PayPal sandbox account.
 Install and configure react-paypal-js for seamless PayPal integration.
 
 Display PayPal payment methods, including credit/debit cards.
+
+Milestone 31 - Global State Management with Redux
+Overview
+This milestone focuses on implementing global state management using Redux. The application will store and manage global states efficiently.
+
+Features
+Install and configure react-redux for state management.
+
+Create a Redux store to manage global user state.
+
+Implement a reducer to handle user email state.
+
+Use Redux actions to update and retrieve global states.
+
+Wrap the app with a provider to enable global state access.
