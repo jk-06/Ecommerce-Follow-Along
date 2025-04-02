@@ -651,6 +651,7 @@ Overview
 This milestone focuses on implementing global state management using Redux. The application will store and manage global states efficiently.
 
 Features
+
 Install and configure react-redux for state management.
 
 Create a Redux store to manage global user state.
