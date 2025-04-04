@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import MyProduct from "../components/myproduct";
 import Nav from "../components/nav";
+import { useSelector } from "react-redux";
 
 export default function MyProducts() {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const email = "jk@gmail.com";
+    const email = useSelector((state) => state.user.email);
 
 
     useEffect(() => {

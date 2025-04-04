@@ -1,10 +1,29 @@
 import { React, useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import styles from "../../styles/styles";
+import axios from "axios";
 import { useDispatch } from 'react-redux';
 import { setemail } from "../../store/userActions";
+import { useNavigate } from "react-router-dom";
 
+// Ensure axios sends cookies with requests
+axios.defaults.withCredentials = true;
 const Login = () => {
+  const handleSubmit =async(e)=>{
+    e.preventDefault();
+    try {
+      const response = await axios.post("http://localhost:5000/api/v2/user/login", { email, password });
+      console.log(response.data);
+          // Dispatch action to store email in Redux state
+          dispatch(setemail(email));
+          // Redirect to profile page after successful login
+          navigate("/");
+    } catch (error) {
+      console.error("There was an error logging in!", error);
+    }
+  };
+  const dispatch =useDispatch();
+  const navigate =useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState(false);
@@ -38,6 +57,10 @@ const Login = () => {
                 />
               </div>
             </div>
+
+
+
+
             <div>
               <label
                 htmlFor="password"
@@ -70,7 +93,7 @@ const Login = () => {
                   />
                 )}
               </div>
-              </div>
+            </div>
             <div className={`${styles.noramlFlex} justify-between`}>
               <div className={`${styles.noramlFlex}`}>
                 <input
@@ -97,14 +120,17 @@ const Login = () => {
             </div>
             <div>
               <button
-                type="submit"
+                type="submit" onSubmit={handleSubmit}
                 className="group relative w-full h-[40px] flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
               >
                 Submit
               </button>
             </div>
             <div className={`${styles.noramlFlex} w-full`}>
-            <h4>Not have any account?</h4>
+              <h4>Not have any account?</h4>
+              { /*<Link to="/sign-up" className="text-blue-600 pl-2">
+                Sign Up
+              </Link> */}
               </div>
           </form>
         </div>
@@ -112,10 +138,6 @@ const Login = () => {
     </div>
      )
     }
+   
+   
     export default Login
-
-
-
-
-
-

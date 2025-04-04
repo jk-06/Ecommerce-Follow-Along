@@ -661,3 +661,39 @@ Implement a reducer to handle user email state.
 Use Redux actions to update and retrieve global states.
 
 Wrap the app with a provider to enable global state access.
+
+Milestone 32 - Using Redux for Global State in a Multi-Page Application
+Overview
+This milestone focuses on utilizing Redux to store and access the global state across multiple pages efficiently. The application will ensure seamless state management and retrieval throughout different components.
+
+Features
+Install and configure Redux to manage global state.
+
+Use dispatch in the login page to store user email globally.
+
+Implement a reducer to manage the global email state.
+
+Use useSelector to access the stored email on all other pages.
+
+Wrap the app with a provider to enable global state access.
+
+Milestone 33 - Implementing JWT Authentication with Cookies
+Overview
+This milestone focuses on generating and managing JWT tokens for authentication. The application will securely store the token inside browser cookies to maintain user sessions.
+
+Features
+Install and configure the jsonwebtoken package.
+
+Use the sign method to create a JWT token containing the user's email and ID.
+
+Set maxAge to define the token's expiration time.
+
+Attach the JWT token to the response as a cookie for secure storage in the browser.
+
+
+
+
+
+
+
+

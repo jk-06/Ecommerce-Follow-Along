@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Nav from '../components/nav'; // Ensure correct casing
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 
 const SelectAddress = () => {
@@ -9,18 +10,15 @@ const SelectAddress = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const navigate = useNavigate();
-
-
-
-
-    const userEmail = 'jk@gmail.com';
+    const email = useSelector((state) => state.user.email);
 
 
     useEffect(() => {
+        if(!email) return;
         const fetchAddresses = async () => {
             try {
                 const response = await axios.get('http://localhost:8000/api/v2/user/addresses', {
-                    params: { email: userEmail },
+                    params: { email },
                 });
 
 
@@ -54,12 +52,12 @@ const SelectAddress = () => {
 
 
         fetchAddresses();
-    }, [userEmail]);
+    }, [email]);
 
 
     const handleSelectAddress = (addressId) => {
         // Navigate to Order Confirmation with the selected address ID and email
-        navigate('/order-confirmation', { state: { addressId, email: userEmail } });
+        navigate('/order-confirmation', { state: { addressId, email } });
     };
 
 
