@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlinePlusCircle } from "react-icons/ai";
-import axios from "axios";
+import axios from "../axiosConfig";
 import { useParams, useNavigate } from "react-router-dom";
 import Nav from "../components/nav";
 
@@ -32,7 +32,7 @@ const CreateProduct = () => {
     useEffect(() => {
         if (isEdit) {
             axios
-                .get(`http://localhost:8000/api/v2/product/product/${id}`)
+                .get(`/api/v2/product/product/${id}`)
                 .then((response) => {
                     const p = response.data.product;
                     setName(p.name);
@@ -83,7 +83,7 @@ const CreateProduct = () => {
         try {
             if (isEdit) {
                 const response = await axios.put(
-                    `http://localhost:8000/api/v2/product/update-product/${id}`,
+                    `/api/v2/product/update-product/${id}`,
                     formData,
                     {
                         headers: { "Content-Type": "multipart/form-data" },
@@ -95,7 +95,7 @@ const CreateProduct = () => {
                 }
             } else {
                 const response = await axios.post(
-                    "http://localhost:8000/api/v2/product/create-product",
+                    "/api/v2/product/create-product",
                     formData,
                     {
                         headers: { "Content-Type": "multipart/form-data" },

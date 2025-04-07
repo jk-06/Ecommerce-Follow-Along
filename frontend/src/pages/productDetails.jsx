@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
+import axios from "../axiosConfig";
 import Nav from "../components/nav";
 import { IoIosAdd } from "react-icons/io";
 import { IoIosRemove } from "react-icons/io";
@@ -18,7 +18,7 @@ export default function ProductDetails() {
 		const fetchProduct = async () => {
 			try {
 				const response = await axios.get(
-					`http://localhost:8000/api/v2/product/product/${id}`
+					`/api/v2/product/product/${id}`
 				);
 				console.log("Fetched product:", response.data.product);
 				setProduct(response.data.product); // Ensure correct state setting
@@ -54,7 +54,7 @@ export default function ProductDetails() {
 	const addtocart = async () => {
 		try {
 			const response = await axios.post(
-				"http://localhost:8000/api/v2/product/cart",
+				"/api/v2/product/cart",
 				{
 					userId: email,
 					productId: id,

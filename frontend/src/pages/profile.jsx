@@ -3,6 +3,7 @@ import AddressCard from "../components/AddressCard";
 import Nav from "../components/nav";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import axios from "../axiosConfig";
 
 
 export default function Profile() {
@@ -22,27 +23,17 @@ export default function Profile() {
 
     useEffect(() => {
         if(!email) return;
-        fetch(
-            `http://localhost:8000/api/v2/user/profile?email=${email}`,
-            {
-                method: "GET",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-            }
-        )
-            .then((res) => {
-                if (!res.ok) {
-                    throw new Error(`HTTP error! status: ${res.status}`);
-                }
-                return res.json();
-            })
-            .then((data) => {
-                setPersonalDetails(data.user);
-                setAddresses(data.addresses);
-                console.log("User fetched:", data.user);
-                console.log("Addresses fetched:", data.addresses);
-            });
+        axios.get(`/api/v2/user/profile?email=${email}`)
+    .then((res) => {
+        setPersonalDetails(res.data.user);
+        setAddresses(res.data.addresses);
+        console.log("User fetched:", res.data.user);
+        console.log("Addresses fetched:", res.data.addresses);
+    })
+    .catch((err) => {
+        console.error("❌ Error fetching profile:", err);
+    });
+
     }, [email]);
     const handleAddAddress=()=>{
         Navigate("/create-address");
@@ -110,7 +101,7 @@ export default function Profile() {
                             </h1>
                         </div>
                         <div className="w-full h-max p-5">
-                            <button className="w-max px-3 py-2 bg-neutral-600 text-neutral-100 rounded-md text-center hover:bg-neutral-100 hover:text-black transition-all duration-100" onClick={handleAddAddress}>;
+                            <button className="w-max px-3 py-2 bg-neutral-600 text-neutral-100 rounded-md text-center hover:bg-neutral-100 hover:text-black transition-all duration-100" onClick={handleAddAddress}>
                                 Add Address
                             </button>
                         </div>
