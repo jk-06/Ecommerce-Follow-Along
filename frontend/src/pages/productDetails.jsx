@@ -52,20 +52,29 @@ export default function ProductDetails() {
 	};
 
 	const addtocart = async () => {
-		try {
-			const response = await axios.post(
-				"/api/v2/product/cart",
-				{
-					userId: email,
-					productId: id,
-					quantity: quantity,
-				}
-			);
-			console.log("Added to cart:", response.data);
-		} catch (err) {
-			console.error("Error adding to cart:", err);
+		if (!email) {
+		  alert("You must be logged in to add items to your cart.");
+		  return;
 		}
-	};
+	  
+		const payload = {
+		  userId: email,  // ✅ match backend field
+		  productId: id,  // ✅ MongoDB ObjectId
+		  quantity: quantity,
+		};
+	  
+		console.log("🛒 Sending this to backend:", payload);
+	  
+		try {
+		  const response = await axios.post("/api/v2/product/cart", payload);
+		  console.log("✅ Added to cart:", response.data);
+		} catch (err) {
+		  console.error("❌ Error adding to cart:", err.response?.data || err.message);
+		}
+	  };
+	  
+	  
+	  
 
 
 	if (loading) {

@@ -705,6 +705,7 @@ Restrict access to authenticated routes unless the token is valid.
 
 Apply this validation step across all secured pages in the app to ensure users must be logged in to access them.
 
+
 Milestone 35 - Deployment of Frontend and Backend
 Overview
 This milestone focuses on deploying both the frontend and backend applications to make your project live and accessible online. The process involves linking the deployed backend with the frontend and ensuring smooth functionality across both.

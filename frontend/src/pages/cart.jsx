@@ -12,22 +12,22 @@ const Cart = () => {
 
     const [products, setProducts] = useState([]);
     useEffect(() => {
-      if(!email) return;
-        axios.get(`/api/v2/product/cartproducts?email=${email}`)
-          .then((res) => {
-            if (!res.ok) {
-              throw new Error(`HTTP error! status: ${res.status}`);
-            }
-            return res.json();
-          })
-          .then((data) => {
-            setProducts(data.cart.map(product => ({quantity: product['quantity'], ...product['productId']})));
-            console.log("Products fetched:", data.cart);
-          })
-          .catch((err) => {
-            console.error(" Error fetching products:", err);
-          });
-      }, [email]);
+      if (!email) return;
+    
+      axios.get(`/api/v2/product/cartproducts?email=${email}`)
+        .then((res) => {
+          // Assuming your backend sends { cart: [...] }
+          setProducts(res.data.cart.map(product => ({
+            quantity: product.quantity,
+            ...product.productId
+          })));
+          console.log("Products fetched:", res.data.cart);
+        })
+        .catch((err) => {
+          console.error("❌ Error fetching products:", err);
+        });
+    }, [email]);
+    
    
       console.log("Products:", products);
 
