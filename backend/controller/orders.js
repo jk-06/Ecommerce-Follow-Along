@@ -18,6 +18,7 @@ router.post('/place-order', isAuthenticatedUser, async (req, res) => {
             return res.status(400).json({ message: 'Shipping address is required.' });
         }
 
+        
         // Retrieve user _id from the user collection using the provided email
         const user = await User.findOne({ email });
         if (!user) {

@@ -10,7 +10,6 @@ export default function Home() {
 
   useEffect(() => {
     axios.get(`/api/v2/product/get-products`)
-    axios.get(`/api/v2/product/get-products`)
     .then((res) => {
       setProducts(res.data.products); // ✅ Access .data first
       setLoading(false);
